@@ -10,3 +10,6 @@ RUN mkdir /var/log/php-fpm && \
     touch /var/log/php-fpm/access.log && \
     touch /var/log/php-fpm/error.log && \
     chown -R www-data:www-data /var/log/php-fpm
+
+# Install xdebug
+RUN apt-get -qqy install php5-xdebug
