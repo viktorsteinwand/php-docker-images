@@ -1,7 +1,8 @@
 FROM php:5.6-fpm
 
 RUN apt-get update -qq && \
-    apt-get -qqy install php5-mysql
+    apt-get -qqy install php5-mysql && \
+    apt-get -qqy install php5-intl
 
 COPY php.ini /usr/local/etc/php/php.ini
 COPY php-fpm.conf /usr/local/etc/
