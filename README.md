@@ -8,7 +8,7 @@ Add these lines to your `docker-compose.yml` to use this image:
 
 ```yml
 php-fpm:
-  image: viktorsteinwand/php-fpm:latest
+  image: viktorsteinwand/php-fpm:7.0
   volumes:
     - /path/to/php-project:/var/www/html
     - /path/to/logfiles/php-fpm:/var/log/php-fpm
@@ -21,7 +21,8 @@ The extention `xdebug` is installed, but is disabled by default due to performan
 1. Create new `xdebug.ini` file with content like described below:  
 
 ```ini
-zend_extension="/usr/lib/php5/20131226/xdebug.so"
+zend_extension="/usr/lib/php5/20131226/xdebug.so" # for PHP 5.6
+zend_extension="/usr/local/lib/php/extensions/xdebug-2.4.0/modules/xdebug.so" # for PHP 7.0
 
 xdebug.default_enable=1
 xdebug.remote_enable=1
@@ -32,9 +33,13 @@ xdebug.remote_port=9000
 xdebug.remote_autostart=1
 xdebug.remote_connect_back=1
 
+; Recursion protection
+xdebug.max_nesting_level = 250
+
 ; display config
 xdebug.cli_color=1
 xdebug.var_display_max_depth=10
+
 ```
 
 2. Map newly created `xdebug.ini` file to the php-fpm `conf.d` folder location:  
