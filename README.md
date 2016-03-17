@@ -51,8 +51,3 @@ php-fpm:
     ...
     - /path/to/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
 ```
-
----
-author: Viktor Steinwand  
-created at: 2015-11-01  
-updated at: 2015-11-08  
