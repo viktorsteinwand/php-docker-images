@@ -15,5 +15,4 @@ RUN cd /usr/local/bin/ \
     && mv phpunit.phar phpunit \
     && chmod +x phpunit
 
-COPY php.ini /usr/local/etc/php/php.ini
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
