@@ -11,6 +11,10 @@ RUN /usr/local/bin/docker-php-ext-install \
     opcache \
     pdo_mysql \
     mysqli \
-    mbstring
+    mbstring \
+    hash \
+    bcmath \
+    json \
+    zip
 
 COPY php.ini /usr/local/etc/php/php.ini
