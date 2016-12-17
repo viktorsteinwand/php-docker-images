@@ -8,18 +8,18 @@ Add these lines to your `docker-compose.yml` to use this image:
 
 ```yml
 php-fpm:
-  image: viktorsteinwand/php:7.0-fpm-symfony
+  image: viktorsteinwand/php:7.1-fpm-symfony
   volumes:
     - /path/to/php-project:/var/www/html
 ```
 
 ## Development environment
 
-The extention `xdebug` and `phpunit` are installed in the dev Dockerfile definitions only. In development environment please use `viktorsteinwand/php:7.0-fpm-symfony-dev` instead:  
+The extention `xdebug` and `phpunit` are installed in the Dockerfile for development only. In development environment please use `viktorsteinwand/php:7.1-fpm-symfony-dev`:  
 
 ```yml
 php-fpm:
-  image: viktorsteinwand/php:7.0-fpm-symfony-dev
+  image: viktorsteinwand/php:7.1-fpm-symfony-dev
   volumes:
     - /path/to/php-project:/var/www/html
 ```
