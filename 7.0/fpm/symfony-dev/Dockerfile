@@ -11,7 +11,11 @@ RUN /usr/local/bin/docker-php-ext-install \
     opcache \
     pdo_mysql \
     mysqli \
-    mbstring
+    mbstring \
+    hash \
+    bcmath \
+    json \
+    zip
 
 # Install xdebug
 RUN mkdir -p /usr/local/lib/php/extensions/ \
